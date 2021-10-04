@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:h2:mem:academicdb;INIT=CREATE SCHEMA IF NOT EXISTS ACADEMIC;DB_CLOSE_DELAY=-1
+    driverClassName: org.h2.Driver
+    username: sa
+    password: sa
+    hikari:
+      schema: ACADEMIC
+  h2:
+    console:
+      enabled: true
+      settings:
+        web-allow-others: true
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    show-sql: true
